@@ -1,5 +1,6 @@
 package com.app.controller;
 
+import com.app.model.users.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -58,6 +59,15 @@ public class ExampleController {
   public ModelAndView example16(String name){
     ModelAndView mv = new ModelAndView();
     mv.addObject("name", name);
+    mv.setViewName("example");
+    return mv;
+  }
+
+  //http://localhost:9090/example7?id=4&login=ITHS&password=pass
+  @RequestMapping("example7")
+  public ModelAndView example17(User user){
+    ModelAndView mv = new ModelAndView();
+    mv.addObject("user", user);
     mv.setViewName("example");
     return mv;
   }
