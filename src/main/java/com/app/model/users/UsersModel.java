@@ -11,8 +11,8 @@ public class UsersModel{
 
   static {
     loggedIn = false;
-    //dbHelper = new UsersDBHelper();
-    dbHelper = new FakeUsersDBHelper();
+    dbHelper = new UsersDBHelper();
+    //dbHelper = new FakeUsersDBHelper();
     users = dbHelper.getAllUsers();
   }
 

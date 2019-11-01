@@ -10,6 +10,7 @@ id          login       password
 */
 
 
+import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +32,10 @@ public class UsersDBHelper implements UsersDBInterface {
     //String dbPath = System.getProperty("user.dir") + File.separator + "data" + File.separator + "users.db";
     //String dbPath = System.getProperty("user.dir")+ File.separator + "web" + File.separator + "data" + File.separator + "users.db";
     //dbPath = "http://maxcoder.pro/heroku_mg-webapplication/users.db";
-    dbPath = "C:\\java\\mg-webapplication\\out\\artifacts\\mg_webapplication_Web_exploded\\data\\users.db";
+    //dbPath = "C:\\java\\mg-webapplication\\out\\artifacts\\mg_webapplication_Web_exploded\\data\\users.db";
     //dbPath = "${catalina.base}/webapps/web/WEB-INF/classes/data/users.db";
+    String dbPath = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator
+            + "resources" + File.separator + "data" + File.separator + "users.db";
 
     url = "jdbc:sqlite:" + dbPath;
   }
