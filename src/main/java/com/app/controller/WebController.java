@@ -16,12 +16,5 @@ public class WebController {
     return mv;
   }
 
-  @RequestMapping("cars")
-  public ModelAndView cars(){
-    String name = "carrrrrs";
-    ModelAndView mv = new ModelAndView();
-    mv.addObject("name", name);
-    mv.setViewName("pages/cars");
-    return mv;
-  }
+
 }
