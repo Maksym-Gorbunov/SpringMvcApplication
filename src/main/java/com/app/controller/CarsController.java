@@ -16,11 +16,11 @@ public class CarsController {
   public ModelAndView cars(){
     String name = "carrrrrs";
     CarsModel model = new CarsModel(new CarsDBHelper());
-    List<Car> data = model.getAllCars();
+    List<Car> cars = model.getAllCars();
 
     ModelAndView mv = new ModelAndView();
     mv.addObject("name", name);
-    mv.addObject("data", data.size());
+    mv.addObject("cars", cars);
     mv.setViewName("pages/cars");
     return mv;
   }

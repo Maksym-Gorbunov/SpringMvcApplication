@@ -7,7 +7,28 @@
 </head>
 <body>
     <h2>Cars</h2>
-    <p th:text="'Hello, ' + ${name} + '!'" />
-    <p th:text="${data}" />
+    <p>database: SQLite3 [cars.db]</p>
+    <!--<p th:text="'Hello, ' + ${name} + '!'" />-->
+    <!--<p th:text="${data}" />-->
+    <hr>
+    <table id="cars_table" class="table table-striped">
+        <tr class="table_header">
+            <th>Make</th>
+            <th>Color</th>
+            <th>Licensenumber</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.make}"></td>
+            <td th:text="${car.color}"></td>
+            <td th:text="${car.licensenumber}"></td>
+            <td >
+                <button>edit</button>
+                <button>delete</button>
+            </td>
+        </tr>
+    </table>
+
+
 </body>
 </html>
